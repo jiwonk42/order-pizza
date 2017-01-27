@@ -8,11 +8,11 @@ A website for a pizza company where a user can choose one or more individual top
 
 #### Specifications
 
-The program takes (a) checked value(s) from a user and returns additional cost for pizza topping(s).
+The program takes (a) checked value(s) from a user and returns added dollar amount for pizza topping(s).
 * Example Input: "Cheese" $3 checked, "Pepperoni" $1 checked
 * Example Output: $4
 
-The program takes a clicked value from a user and returns additional cost for size of pizza.
+The program takes a clicked value from a user and returns added dollar amount for size of pizza.
 * Example Input: "Cheese" $3 checked, "Pepperoni" $1 checked, "Small" $12 selected
 * Example Output: $16
 
