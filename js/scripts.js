@@ -58,6 +58,7 @@ $(document).ready(function() {
 
     var pizza = new Pizza(inputtedToppings, inputtedSize);
 
-    $("#order-detail h2").text(pizza.totalCost());
+    $("#order-detail h3").text("$" + pizza.totalCost());
+
   });
 });
