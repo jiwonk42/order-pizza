@@ -4,7 +4,7 @@
 function Pizza(toppings, size) {
   this.toppings = toppings;
   this.pizzaSize = size;
-  this.totalCost = 0;
+  this.cost = 0;
 }
 
 // Total Cost Prototype
@@ -12,24 +12,35 @@ Pizza.prototype.totalCost = function() {
 
   var totalCost = 0;
 
+  // Adding Topping Cost
   this.toppings.forEach(function(topping) {
     if (topping === "Cheese") {
-      this.totalCost = 3;
+      this.cost = 3;
     } else if (topping === "Pepperoni") {
-      this.totalCost = 1;
+      this.cost = 1;
     } else if (topping === "Mushrooms") {
-      this.totalCost = 1;
+      this.cost = 1;
     } else if (topping === "Sausage") {
-      this.totalCost = 3;
+      this.cost = 3;
     } else if (topping === "Bell Pepper") {
-      this.totalCost = 2;
-    } else { // Onions
-      this.totalCost = 1;
+      this.cost = 2;
+    } else { // "Onions"
+      this.cost = 1;
     }
-    totalCost += this.totalCost;
+    totalCost += this.cost;
   });
-  
-  this.totalCost = totalCost;
+
+  // Adding Size Cost
+  if (this.pizzaSize === "Small") {
+    this.cost = 12;
+  } else if (this.pizzaSize === "Medium") {
+    this.cost = 16;
+  } else { // "Large"
+    this.cost = 20;
+  }
+  totalCost += this.cost;
+
+  return this.cost = totalCost;
 }
 
 // User Interface Logic
@@ -42,11 +53,11 @@ $(document).ready(function() {
     $("input:checkbox[name=add-toppings]:checked").each(function(){
       inputtedToppings.push($(this).val());
     });
-    console.log(inputtedToppings);
+
     var inputtedSize = $("input:radio[name=select-a-size]:checked").val();
-    console.log(inputtedSize);
+
     var pizza = new Pizza(inputtedToppings, inputtedSize);
 
-    $("order-detail h2").text(pizza);
+    $("#order-detail h2").text(pizza.totalCost());
   });
 });
