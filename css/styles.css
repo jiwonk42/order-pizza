@@ -1,7 +1,5 @@
 body {
-  font-size: 20px;
   position: relative;
-  color: black;
 }
 
 body:after {
@@ -18,6 +16,12 @@ body:after {
   height: 100%;
 }
 
+.container-full {
+  color: #1c1c1c;
+  font-size:25px;
+  font-family: Tahoma, Geneva, sans-serif
+}
+
 .header {
   padding: 35px;
 }
@@ -29,30 +33,58 @@ body:after {
   font-family: 'Kaushan Script', cursive, Helvetica, sans-serif;
   font-size: 170px;
   text-shadow: 4px 4px #af3618;
-  color: #231c1a;
+  color: #141414;
 }
 
 .pizza-order {
   position: relative;
   margin: 0 auto;
   padding: 40px;
-  margin-top: 50px;
+  margin-top: 20px;
   width: 80%;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: bold;
 }
 
 .col-md-6 {
   height: 700px;
 }
 
+#order-pizza {
+  margin-top: 40px;
+}
+
+h3 {
+  font-size: 31px;
+  padding-bottom: 8px;
+  font-weight: bold;
+}
+
+h3.size {
+  padding-top: 10px;
+}
+
 .radio-btn {
   margin-right: 15px;
 }
 
-button {
-  margin-top: 100px;
+.btn-md.round {
+  margin-top: 50px;
   float: right;
+  border-radius: 11px;
 }
 
 .right-column {
-  border-left: 1px solid #262626;
+  border-left: 2px dotted #262626;
+}
+
+#order-detail {
+  padding: 0 40px;
+}
+
+#order-detail h1 {
+  text-align: center;
 }

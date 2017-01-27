@@ -17,6 +17,7 @@ The program takes a clicked value from a user and returns added dollar amount fo
 * Example Output: $16
 
 
+
 ## Setup
 
 * Clone this repository
