@@ -1,14 +1,53 @@
 body {
+  color: black;
+  font-size: 20px;
   background-image: url(../img/background.jpeg);
   background-size: cover;
+  position: relative;
+}
+
+body:after {
+  content : "";
+  display: block;
+  position: absolute;
+  background-color: white;
+  opacity : 0.1;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .header {
-  /*background-color: #F4DEB5;*/
   padding: 35px;
 }
 
 .header h1 {
+  opacity : 0.9;
+  z-index: -1;
   text-align: center;
-  font-size: 50px;
+  font-family: 'Kaushan Script', cursive, Helvetica, sans-serif;
+  font-size: 180px;
+  text-shadow: 4px 4px #af3618;
+  color: #231c1a;
+}
+
+.pizza-order {
+  position: relative;
+  padding: 40px;
+  margin-top: 40px;
+}
+
+.pizza-order:after {
+  content : "";
+  display: block;
+  position: absolute;
+  background-color: white;
+  opacity : 0.4;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
