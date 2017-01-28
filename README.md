@@ -16,6 +16,9 @@ The program takes a clicked value from a user and returns added dollar amount fo
 * Example Input: "Cheese" $3 checked, "Pepperoni" $1 checked, "Small" $12 selected
 * Example Output: $16
 
+The program takes a submit value (true) from a user and returns an order receipt.
+* Example Input: "Cheese" $3 checked, "Pepperoni" $1 checked, "Small" $12 selected
+* Example Output: Subtotal($16), Tax($10), Total($26)
 
 ## Setup
 
