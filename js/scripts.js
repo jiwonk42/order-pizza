@@ -24,7 +24,7 @@ Pizza.prototype.totalCost = function() {
       this.cost = 3;
     } else if (topping === "Bell Pepper") {
       this.cost = 2;
-    } else { // "Onions"
+    } else if (topping === "Onions") { // "Onions"
       this.cost = 1;
     }
 
@@ -59,7 +59,9 @@ $(document).ready(function() {
 
     var pizza = new Pizza(inputtedToppings, inputtedSize);
 
-    var subtotal = parseInt(pizza.totalCost() * 0.65);
+    var subtotal = pizza.totalCost() * 0.065;
+
+    subtotal = Math.round(subtotal * 100) / 100;
 
     $("#order-detail").empty().append("<h1>Order Receipt</h1>" +
     "<h4 id='subtotal'>Subtotal: $" + pizza.totalCost() + "</h4>" + "<h4>Tax: + $" + subtotal + "</h4>" + "<hr>"+ "<h4>Total: $" + (pizza.totalCost() + subtotal) + "</h4>" + "<h1>- Thank You -</h1>");
