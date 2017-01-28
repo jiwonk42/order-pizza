@@ -52,3 +52,31 @@ h1 {
 .col-md-6 {
   height: 700px;
 }
+
+#order-pizza {
+  margin-top: 40px;
+}
+
+h3 {
+  font-size: 31px;
+  padding-bottom: 8px;
+  font-weight: bold;
+}
+
+h3.size {
+  padding-top: 10px;
+}
+
+.radio-btn {
+  margin-right: 15px;
+}
+
+.btn-md.round {
+  margin-top: 50px;
+  float: right;
+  border-radius: 11px;
+}
+
+.right-column {
+  border-left: 2px dotted #262626;
+}

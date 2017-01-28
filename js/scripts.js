@@ -59,9 +59,6 @@ $(document).ready(function() {
 
     var pizza = new Pizza(inputtedToppings, inputtedSize);
 
-    var subtotal = parseInt(pizza.totalCost() * 0.65);
-
-    $("#order-detail").empty().append("<h1>Order Receipt</h1>" +
-    "<h4 id='subtotal'>Subtotal: $" + pizza.totalCost() + "</h4>" + "<h4>Tax: + $" + subtotal + "</h4>" + "<hr>"+ "<h4>Total: $" + (pizza.totalCost() + subtotal) + "</h4>" + "<h1>- Thank You -</h1>");
+    
   });
 });
