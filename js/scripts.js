@@ -12,7 +12,7 @@ Pizza.prototype.totalCost = function() {
 
   var totalCost = 0;
 
-  // Adding Topping Cost
+  // Adds Topping Cost
   this.toppings.forEach(function(topping) {
     if (topping === "Cheese") {
       this.cost = 3;
@@ -27,10 +27,11 @@ Pizza.prototype.totalCost = function() {
     } else { // "Onions"
       this.cost = 1;
     }
+
     totalCost += this.cost;
   });
 
-  // Adding Size Cost
+  // Adds Size Cost
   if (this.pizzaSize === "Small") {
     this.cost = 12;
   } else if (this.pizzaSize === "Medium") {
@@ -58,7 +59,9 @@ $(document).ready(function() {
 
     var pizza = new Pizza(inputtedToppings, inputtedSize);
 
-    $("#order-detail h3").text("$" + pizza.totalCost());
+    var subtotal = parseInt(pizza.totalCost() * 0.65);
 
+    $("#order-detail").empty().append("<h1>Order Receipt</h1>" +
+    "<h4 id='subtotal'>Subtotal: $" + pizza.totalCost() + "</h4>" + "<h4>Tax: + $" + subtotal + "</h4>" + "<hr>"+ "<h4>Total: $" + (pizza.totalCost() + subtotal) + "</h4>" + "<h1>- Thank You -</h1>");
   });
 });
